@@ -1,10 +1,3 @@
-FROM node:14
+FROM postgres:latest
 
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-
-CMD ["npm", "start"]
+COPY ./init-scripts /docker-entrypoint-initdb.d
