@@ -6,7 +6,6 @@ test('should return average, maximum and minimum events daily in date range', as
 
     const result = await controller.execute(dateStart, dateEnd);
 
-    // Assertions to check the structure and values of the result
     expect(result).toHaveProperty('data');
     expect(result.data).toBeInstanceOf(Array);
 
@@ -16,24 +15,19 @@ test('should return average, maximum and minimum events daily in date range', as
         }
     });
 
-    // Verificar se avgDamage é menor ou igual a maxDamage para cada data
     result.data.forEach(summary => {
         expect(summary.avgDamage).toBeLessThanOrEqual(summary.maxDamageEvent.damage);
     });
 
     if (result.data.length > 0) {
-        const summary = result.data[0]; // Assuming it's an array of daily summaries
+        const summary = result.data[0];
 
-        // Check if each daily summary has the expected properties
         expect(summary).toHaveProperty('date');
         expect(summary).toHaveProperty('avgDamage');
         expect(summary).toHaveProperty('maxDamageEvent');
         expect(summary).toHaveProperty('minDamageEvent');
 
-        // You can add more specific checks based on your expected data structure
-        // For example, if you know the expected format of date, you can check it
         expect(summary.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     }
 
-    // You can add more assertions based on your actual data structure and expectations
 });

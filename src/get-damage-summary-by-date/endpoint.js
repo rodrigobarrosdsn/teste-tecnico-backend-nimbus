@@ -1,4 +1,3 @@
-// src/get-damage-summary-by-date/endpoint.js
 const controller = require('./controller');
 
 module.exports = {

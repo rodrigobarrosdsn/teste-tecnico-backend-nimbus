@@ -6,7 +6,7 @@ const sequelize = new Sequelize({
   username: 'rodrigo',
   password: '12345',
   database: 'nimbus_db',
-  host: 'postgres', // Nome do serviço do PostgreSQL no Docker
+  host: 'postgres',
   port: 5432,
   logging: false,
 });

@@ -1,7 +1,5 @@
-// Certifique-se de importar o Sequelize e o operador 'Op' se não estiverem importados
 const { Sequelize, Op } = require('sequelize');
 
-// Certifique-se de importar o modelo Alert corretamente
 const { Alert } = require('../../models');
 
 module.exports = {
