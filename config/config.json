@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "rodrigo",
+    "password": "12345",
+    "database": "nimbus_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "rodrigo",
+    "password": "12345",
+    "database": "nimbus_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "rodrigo",
+    "password": "12345",
+    "database": "nimbus_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
